@@ -4,5 +4,25 @@
   "dependencies": {
     "bootstrap": "3",
     "jquery": "^3.5.1"
-  }
+  },
+  "version": "1.0.0",
+  "main": "func.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solness88/Vue.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solness88/Vue.js/issues"
+  },
+  "homepage": "https://github.com/solness88/Vue.js#readme",
+  "description": ""
 }
