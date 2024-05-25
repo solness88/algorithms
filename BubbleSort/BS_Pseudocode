@@ -1,0 +1,24 @@
+function BubbleSort(A, N)
+  swapped = true
+  while(swapped) do
+    swapped = false
+    for (0 <= i < N-1) do
+      if(A[i] > A[i+1]) then
+        swap(A[i], A[i+1])
+        swapped = true
+      end if
+    end for
+    N = N - 1
+  end while
+  return A
+end function
+
+===================================
+function BubbleSort(A)
+  for i = 1 to A.length -1
+    for J = A.length down to i + 1
+      if A[j] < A[j-1]
+        enchange A[j]with A[j-1]
+      end if
+    end for
+  end for
