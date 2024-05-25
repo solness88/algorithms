@@ -1,0 +1,20 @@
+function BucketSort(A, N, max)
+  Buckets ← new array(N)
+
+  for 0 <= i < N
+    Buckets[i] ← empty linked list
+  end for
+
+  for 0 <= i < N
+    Buckets[floor( (A[i]*N) / (max+1) )] ← A[i]
+  end for
+
+  for 0 <= i < N
+    sort(B[i])
+  end for
+  
+  for 0 <= i < N
+    copy list B[i] back to A
+  end for
+
+end function
