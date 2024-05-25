@@ -1,0 +1,22 @@
+function CountingSort(A, K)
+  C ← new array(k+1) of zeros
+  R ← new array(length(A)) of zeros
+  pos ← 0
+  
+  for 0 <= j < length do
+    C[ A[j] ] ← C[ A[j] ] + 1
+  end for 
+
+  for 0 <= i < (k+1) do
+
+    for pos <= r < pos + C[i] do
+      R[r] = i
+    end for
+  
+    pos = r
+  
+  end for
+  
+  return R
+
+end function
