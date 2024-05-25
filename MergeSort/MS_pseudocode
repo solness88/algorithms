@@ -1,0 +1,32 @@
+function MergeSort(A, int l, int h)
+  if(l < h)
+    mid = l + floor((h-1)/2)
+    MergeSort(A, l, mid)
+    MergeSort(A, mid+1, h)
+    Merge(A, l, mid, h)    
+  end if
+end function
+
+function F(A,low,mid,high)
+    for 0 <= i <=mid
+         B[i]=A[i]
+    for 0 <= i < (high-mid)
+         C[i]=A[i+mid+1]
+    i=0; j=0; k=0
+    while( i <=mid  AND  j<(high-mid) )
+        if(B[i]<C[j])
+            A[k]=B[i]
+            i=i+1
+        else
+            A[k]=C[j]
+            j=j+1
+        k=k+1
+    if(i>mid)
+         for j <= m < high-mid
+             A[k]=C[m]
+             k=k+1
+    if(j >= (high-mid) )
+         for i <= m <mid+1
+             A[k]=B[m]
+             k=k+1
+end function
