@@ -1,0 +1,6 @@
+function SelectionSort(A, N)
+  for 0 <= i = N-1 do
+    min = pos_min(A, i, N-1)
+    swap(A[i], A[min])
+  end for
+end function
