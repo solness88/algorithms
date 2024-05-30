@@ -10,6 +10,7 @@ HashTable::HashTable(long _a, long _c, long _m)
 HashTable::~HashTable() {
 }
 
+//insert using linear proving for collision resolution
 void HashTable::insert(int key) {
     if (key <= 0) {
         throw std::invalid_argument("Only strictly positive numbers are allowed");
@@ -29,11 +30,11 @@ void HashTable::insert(int key) {
     numElements++;
 }
 
+//extend the size of hash table
 void HashTable::extend() {
-    long newSize = m * 2; // 拡張因子を2倍に設定
+    long newSize = m * 2;
     std::vector<long> newTable(newSize, 0);
 
-    // 再ハッシュ
     for (long i = 0; i < m; ++i) {
         if (hashTable[i] != 0) {
             long newIndex = (a * hashTable[i] + c) % newSize;
@@ -44,10 +45,11 @@ void HashTable::extend() {
         }
     }
 
-    hashTable = std::move(newTable); // 新しいテーブルに置き換え
+    hashTable = std::move(newTable); // replace to new table
     m = newSize;
 }
 
+//find key in hash table
 bool HashTable::find(int key) {
     long index = (a * key + c) % m;
 
@@ -60,6 +62,7 @@ bool HashTable::find(int key) {
     return false;
 }
 
+//remove the number of key from the hash table
 void HashTable::remove(int key){
     long index = (a * key + c) % m;
 
@@ -75,4 +78,5 @@ void HashTable::remove(int key){
 
 double HashTable::loadFactor() {
     return static_cast<double>(numElements) / m;
+    
 }

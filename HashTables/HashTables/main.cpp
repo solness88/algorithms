@@ -17,7 +17,7 @@ int main() {
     std::cout << "Find 5: " << (ht.find(5) ? "Found" : "Not Found") << std::endl;
     std::cout << "Find 15: " << (ht.find(15) ? "Found" : "Not Found") << std::endl;
     std::cout << "Find 25: " << (ht.find(25) ? "Found" : "Not Found") << std::endl;
-    std::cout << "Find 35: " << (ht.find(35) ? "Found" : "Not Found") << std::endl; // 存在しない値
+    std::cout << "Find 35: " << (ht.find(35) ? "Found" : "Not Found") << std::endl;
 
     ht.remove(15);
     std::cout << "Table after removing 15:" << std::endl;

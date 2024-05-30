@@ -3,13 +3,13 @@
 #include <vector>
 
 class HashTable {
-    public: // for testing purposes
+    public:
       int *buckets = 0;
       long a;
       long c;
       long m;
       std::vector<long> hashTable;
-      int numElements; // 現在の要素数を追跡するための変数
+      int numElements;
 
     public:
       HashTable(long, long, long);
