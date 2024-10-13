@@ -1,5 +1,5 @@
 function partition(A, low, high) {
-  let pivot = Math.floor((low + high) / 2);
+  let pivot = A[high];
   let i = low;
   for (let j = low; j < high; j++) {
     if (A[j] <= pivot) {
